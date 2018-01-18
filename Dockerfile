@@ -21,7 +21,8 @@ WORKDIR /usr/src/app
 # This learns the long range features
 # First clone the dependencies.
 # git clone https://github.com/patrickmineault/write-rnn-tensorflow.git write_rnn_tensorflow
-# CMD python train_long_range.py
+# CMD python train_and_eval_mdn.py --operation=train
+# CMD python train_and_eval_mdn.py --operation=eval
 
 # This learns the main model
 # CMD ./fit_and_refine.sh

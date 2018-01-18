@@ -214,7 +214,7 @@ def get_config():
               'use_normalizer': True,
               'boundary_conditions': 'mirror',
               'global_features': 'prepostunsupervised', #'prepost' uses predefined global features instead of the learned ones.
-              'global_lengthscale': 5000, # for preport
+              'global_lengthscale': 5000, # for prepost
               'dropout': 0.3,
               'state_size': 1,
               'refine_recording': None,

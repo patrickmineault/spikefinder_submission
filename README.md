@@ -7,9 +7,10 @@ Steps to retrain model from scratch:
   * Clone this repo
   * `cd` into `spikefinder_submission` and clone mixture density network model
   via `git clone https://github.com/patrickmineault/write-rnn-tensorflow.git write_rnn_tensorflow`
-  * Train mixture density network long-range features via `python train_long_range.py`
-  * Fit core model and refine for each of the first 5 recording sets by running `./fit_and_refine.sh`
-  * Predict for the unrefined and the refined model via `./predict_all.sh`
+  * Train mixture density network latent features via `python train_and_eval_mdn.py --operation=train`
+  * Eval mixture density network latent features via `python train_and_eval_mdn.py --operation=eval`
+  * Fit core model and refine for each of the first 5 recording sets by running `./train_and_refine.sh`
+  * Eval for the unrefined and the refined model via `./eval_all.sh`
 
 Steps to predict using pretrained model via Docker.
 
