@@ -1,7 +1,17 @@
 #!/bin/sh
 python eval_resnet.py --model_name=universal_resnet
-python eval_resnet.py --model_name=universal_resnet --refine_recording=0
-python eval_resnet.py --model_name=universal_resnet --refine_recording=1
-python eval_resnet.py --model_name=universal_resnet --refine_recording=2
-python eval_resnet.py --model_name=universal_resnet --refine_recording=3
-python eval_resnet.py --model_name=universal_resnet --refine_recording=4
+python eval_resnet.py --model_name=universal_resnet_recording00/universal_resnet --refine_recording=0
+mv preds/universal_resnet_recording00_universal_resnet_refined/* preds/universal_resnet_refined
+python eval_resnet.py --model_name=universal_resnet_recording01/universal_resnet --refine_recording=1
+mv preds/universal_resnet_recording01_universal_resnet_refined/* preds/universal_resnet_refined
+python eval_resnet.py --model_name=universal_resnet_recording02/universal_resnet --refine_recording=2
+mv preds/universal_resnet_recording02_universal_resnet_refined/* preds/universal_resnet_refined
+python eval_resnet.py --model_name=universal_resnet_recording03/universal_resnet --refine_recording=3
+mv preds/universal_resnet_recording03_universal_resnet_refined/* preds/universal_resnet_refined
+python eval_resnet.py --model_name=universal_resnet_recording04/universal_resnet --refine_recording=4
+mv preds/universal_resnet_recording04_universal_resnet_refined/* preds/universal_resnet_refined
+rmdir preds/universal_resnet_recording00_universal_resnet_refined
+rmdir preds/universal_resnet_recording01_universal_resnet_refined
+rmdir preds/universal_resnet_recording02_universal_resnet_refined
+rmdir preds/universal_resnet_recording03_universal_resnet_refined
+rmdir preds/universal_resnet_recording04_universal_resnet_refined
